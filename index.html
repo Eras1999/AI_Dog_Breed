@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dog Breed Classifier</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+  <div class="container text-center mt-5">
+    <h1>🐶 Dog Breed Classifier</h1>
+    <input id="imageUpload" type="file" accept="image/*" class="form-control mt-4 mb-3">
+    
+    <div id="preview" class="mb-3"></div>
+
+    <button id="predictBtn" class="btn btn-primary" disabled>Find Breed</button>
+
+    <h4 id="result" class="text-success mt-4"></h4>
+    <div id="probabilities"></div>
+  </div>
+
+  <!-- Teachable Machine + TensorFlow -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image"></script>
+  <script src="script.js"></script>
+</body>
+</html>
