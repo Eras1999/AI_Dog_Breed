@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Dog Breed Classifier</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Breed Classifier</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-light">
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">🐾 Dog Breed Classifier 🐶</h1>
+        <p class="text-center lead">Upload an image of a dog to identify its breed and the confidence percentage!</p>
 
-  <div class="container text-center mt-5">
-    <h1>🐶 Dog Breed Classifier</h1>
-    <input id="imageUpload" type="file" accept="image/*" class="form-control mt-4 mb-3">
-    
-    <div id="preview" class="mb-3"></div>
+        <div class="card shadow-lg p-4 mt-5">
+            <div class="mb-3">
+                <label for="imageUpload" class="form-label fs-5">Upload Dog Image</label>
+                <input class="form-control" type="file" id="imageUpload" accept="image/*">
+            </div>
 
-    <button id="predictBtn" class="btn btn-primary" disabled>Find Breed</button>
+            <div class="text-center my-4">
+                <img id="uploadedImage" class="img-fluid rounded" src="#" alt="Uploaded Image" style="display: none; max-height: 400px;">
+                <canvas id="canvas" class="d-none"></canvas>
+            </div>
 
-    <h4 id="result" class="text-success mt-4"></h4>
-    <div id="probabilities"></div>
-  </div>
+            <button id="classifyButton" class="btn btn-primary btn-lg w-100 mb-3" disabled>Classify Breed</button>
 
-  <!-- Teachable Machine + TensorFlow -->
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image"></script>
-  <script src="script.js"></script>
+            <div id="predictionResults" class="mt-4">
+                <h3 class="text-center">Prediction:</h3>
+                <ul class="list-group" id="breedList">
+                    </ul>
+            </div>
+
+            <div id="loadingSpinner" class="text-center my-3" style="display: none;">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-2">Loading model and predicting...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

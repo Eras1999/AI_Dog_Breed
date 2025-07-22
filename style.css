@@ -1,7 +1,30 @@
-#preview img {
-    max-width: 300px;
-    border-radius: 10px;
-    margin-top: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  }
-  
+body {
+    background-color: #f8f9fa; /* Light background color */
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.card {
+    border-radius: 15px;
+    border: none;
+}
+
+#uploadedImage {
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    padding: 10px 15px;
+}
+
+.list-group-item strong {
+    color: #007bff; /* Bootstrap primary blue */
+}
