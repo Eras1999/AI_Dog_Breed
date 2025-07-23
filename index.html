@@ -3,47 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dog Breed Classifier</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Save Sathwa Dog Breed Identifier 🐶</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container my-5">
-        <h1 class="text-center mb-4">🐾 Dog Breed Classifier 🐶</h1>
-        <p class="text-center lead">Upload an image of a dog to identify its breed and the confidence percentage!</p>
+    <div class="container">
+        <h1>Save Sathwa Dog Breed Identifier 🐶</h1>
+        <p class="intro-text">Upload a dog image to identify the breed from our trained AI model. This model currently recognizes 10 dog breeds with over <strong>80% accuracy</strong> when image quality is good.</p>
 
-        <div class="card shadow-lg p-4 mt-5">
-            <div class="mb-3">
-                <label for="imageUpload" class="form-label fs-5">Upload Dog Image</label>
-                <input class="form-control" type="file" id="imageUpload" accept="image/*">
-            </div>
-
-            <div class="text-center my-4">
-                <img id="uploadedImage" class="img-fluid rounded" src="#" alt="Uploaded Image" style="display: none; max-height: 400px;">
-                <canvas id="canvas" class="d-none"></canvas>
-            </div>
-
-            <button id="classifyButton" class="btn btn-primary btn-lg w-100 mb-3" disabled>Classify Breed</button>
-
-            <div id="predictionResults" class="mt-4">
-                <h3 class="text-center">Prediction:</h3>
-                <ul class="list-group" id="breedList">
-                    </ul>
-            </div>
-
-            <div id="loadingSpinner" class="text-center my-3" style="display: none;">
-                <div class="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Loading...</span>
+        <div class="dog-cards-section">
+            <h2>🐾 Trained Dog Breeds in Sathwa AI</h2>
+            <div class="dog-cards">
+                <div class="dog-card">
+                    <img src="images/labrador.jpg" alt="Labrador Retriever">
+                    <h3>Labrador Retriever</h3>
+                    <p><strong>Labrador Retriever</strong></p>
+                    <p>🐕 Temperament: Friendly, Active, Outgoing</p>
                 </div>
-                <p class="mt-2">Loading model and predicting...</p>
+                <div class="dog-card">
+                    <img src="images/german_shepherd.jpg" alt="German Shepherd">
+                    <h3>German Shepherd</h3>
+                    <p><strong>German Shepherd</strong></p>
+                    <p>🐕 Temperament: Intelligent, Confident, Courageous</p>
+                </div>
+                <div class="dog-card">
+                    <img src="images/golden_retriever.jpg" alt="Golden Retriever">
+                    <h3>Golden Retriever</h3>
+                    <p><strong>Golden Retriever</strong></p>
+                    <p>🐕 Temperament: Intelligent, Friendly, Devoted</p>
+                </div>
+                <div class="dog-card">
+                    <img src="images/bulldog.jpg" alt="Bulldog">
+                    <h3>Bulldog</h3>
+                    <p><strong>Bulldog</strong></p>
+                    <p>🐕 Temperament: Calm, Courageous, Friendly</p>
+                </div>
+                <div class="dog-card">
+                    <img src="images/beagle.jpg" alt="Beagle">
+                    <h3>Beagle</h3>
+                    <p><strong>Beagle</strong></p>
+                    <p>🐕 Temperament: Curious, Merry, Friendly</p>
+                </div>
+                <div class="dog-card">
+                    <img src="images/poodle.jpg" alt="Poodle">
+                    <h3>Poodle</h3>
+                    <p><strong>Poodle</strong></p>
+                    <p>🐕 Temperament: Intelligent, Active, Alert</p>
+                </div>
+                <div class="dog-card">
+                    <img src="images/rottweiler.jpg" alt="Rottweiler">
+                    <h3>Rottweiler</h3>
+                    <p><strong>Rottweiler</strong></p>
+                    <p>🐕 Temperament: Confident, Fearless, Devoted</p>
+                </div>
+                <div class="dog-card">
+                    <img src="images/yorkshire_terrier.jpg" alt="Yorkshire Terrier">
+                    <h3>Yorkshire Terrier</h3>
+                    <p><strong>Yorkshire Terrier</strong></p>
+                    <p>🐕 Temperament: Bold, Independent, Affectionate</p>
+                </div>
+                <div class="dog-card">
+                    <img src="images/boxer.jpg" alt="Boxer">
+                    <h3>Boxer</h3>
+                    <p><strong>Boxer</strong></p>
+                    <p>🐕 Temperament: Playful, Energetic, Loyal</p>
+                </div>
+                <div class="dog-card">
+                    <img src="images/dachshund.jpg" alt="Dachshund">
+                    <h3>Dachshund</h3>
+                    <p><strong>Dachshund</strong></p>
+                    <p>🐕 Temperament: Curious, Friendly, Spunky</p>
+                </div>
             </div>
+        </div>
+        <br><br>
+        <div class="info-box">
+            <h3>🔍 Recognized Breeds</h3>
+            <ul>
+                <li><strong>Labrador Retriever</strong> – Friendly, Active, Outgoing</li>
+                <li><strong>German Shepherd</strong> – Intelligent, Confident, Courageous</li>
+                <li><strong>Golden Retriever</strong> – Intelligent, Friendly, Devoted</li>
+                <li><strong>Bulldog</strong> – Calm, Courageous, Friendly</li>
+                <li><strong>Beagle</strong> – Curious, Merry, Friendly</li>
+                <li><strong>Poodle</strong> – Intelligent, Active, Alert</li>
+                <li><strong>Rottweiler</strong> – Confident, Fearless, Devoted</li>
+                <li><strong>Yorkshire Terrier</strong> – Bold, Independent, Affectionate</li>
+                <li><strong>Boxer</strong> – Playful, Energetic, Loyal</li>
+                <li><strong>Dachshund</strong> – Curious, Friendly, Spunky</li>
+            </ul>
+            <p class="note">📸 Please use a clear image for best results. Predictions with confidence above <strong>80%</strong> are usually correct.</p>
+        </div>
+
+        <input type="file" id="imageUpload" accept="image/*">
+        <button id="classifyButton" disabled>Classify Breed</button>
+
+        <div id="imagePreviewContainer" class="hidden">
+            <h2>Uploaded Image:</h2>
+            <img id="uploadedImage" src="#" alt="Image Preview" style="max-width: 100%; height: auto;">
+            <canvas id="canvas" class="hidden"></canvas>
+        </div>
+
+        <div id="predictionResults" class="hidden">
+            <h2>Prediction Results:</h2>
+            <div id="breedList"></div>
+        </div>
+
+        <div id="noObjectDetected" class="hidden">
+            <p>😔 No dog detected. Please try again with another image!</p>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
